@@ -1,7 +1,8 @@
 # Adjustable Laboratory Power Supply
 
-## Project Goal
-The goal of this project was to design and build a laboratory power supply with adjustable output voltage and integrated measurement of both voltage and load current. The device was designed as a versatile tool for powering and diagnosing various electronic circuits. Special attention was given to precise voltage regulation, accurate measurements, and stable operation.
+## Device Overview  
+This project focuses on designing and building a laboratory power supply with adjustable output voltage and integrated measurement of both voltage and load current. The device serves as a versatile tool for powering and diagnosing various electronic circuits. Special attention was given to precise voltage regulation, accurate measurements, and stable operation.
+s
 
 ## Specifications
 - **Input Voltage:** 230V AC, 50Hz  
@@ -24,6 +25,7 @@ The circuit consists of multiple sections:
 A schematic of the circuit is included in the documentation.
 
 ## Circuit Description
+![Cicuit Schematic](images/schematic.png)
 The power supply uses a **230V to 12V transformer**, followed by a **KBP02G bridge rectifier** for full-wave rectification. A **4700µF capacitor (C1)** smooths voltage fluctuations, and **C2** acts as a decoupling capacitor. The supply voltage powers an **LM358 operational amplifier**, an **Arduino Uno microcontroller**, and other circuit components. 
 
 Voltage regulation is performed using an **LM317T adjustable voltage regulator**, with control signals processed by the microcontroller. A **DAC (Digital-to-Analog Converter)** controlled via **I2C** is used to set the output voltage. A **non-inverting operational amplifier** scales the DAC output to drive the **LM317T**, enabling software-based voltage adjustment.
@@ -39,3 +41,17 @@ The Arduino Uno is programmed using **C++** in **Arduino IDE**. The software con
 
 The software also includes an optional feature to generate **sinusoidal waveforms**, which can be activated by modifying specific code sections.
 
+## Device Views
+Below are different perspectives of the assembled device:
+
+### Front View
+![Front View](images/front_view.jpg)
+
+### Back View
+![Back View](images/back_view.jpg)
+
+### Internal Components
+![Inside View](images/inside_view.jpg)
+
+### Internal Components
+![Inside View Zoomed](images/inside_view_zoomed.jpg)
